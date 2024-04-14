@@ -1,0 +1,39 @@
+# Hugo and Blowfish
+public/
+resources/
+exampleSite/resources/
+themes/blowfish/
+.github/
+.vscode/
+
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+#others
+node_modules
+.hugo_build.lock
+.firebaserc
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.idea
+.Ulysses-Group.plist
+.Ulysses-Settings.plist
