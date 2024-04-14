@@ -21,6 +21,9 @@ test:
     - master
 
 pages:
+  before_script:
+    - git submodule init
+    - git submodule update --force
   script:
     - hugo
   artifacts:
