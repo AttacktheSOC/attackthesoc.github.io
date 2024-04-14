@@ -2,9 +2,6 @@
 public/
 resources/
 exampleSite/resources/
-themes/blowfish/
-.github/
-.vscode/
 
 
 # Binaries for programs and plugins
