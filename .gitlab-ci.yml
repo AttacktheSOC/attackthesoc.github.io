@@ -1,42 +1,30 @@
-variables:
-  DART_SASS_VERSION: 1.72.0
-  HUGO_VERSION: 0.124.0
-  NODE_VERSION: 20.x
-  GIT_DEPTH: 0
-  GIT_STRATEGY: clone
-  GIT_SUBMODULE_STRATEGY: recursive
-  TZ: America/Los_Angeles
+#
+# Before using this .gitlab-ci.yml:
+#
+# - This example uses the latest Docker image, but you might want to use the
+#   exact version to avoid any broken pipelines.
+#   All available Hugo versions are listed under https://gitlab.com/pages/hugo/container_registry.
+# - Read about the difference between hugo and hugo_extended
+#   https://gitlab.com/pages/hugo/-/blob/main/README.md#hugo-vs-hugo_extended.
+# - To change the theme, see
+#   https://gitlab.com/pages/hugo/-/blob/main/README.md#use-a-custom-theme.
+#
+image: registry.gitlab.com/pages/hugo/hugo:latest
 
-image:
-  name: golang:1.22.1-bookworm
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+test:
+  script:
+    - hugo
+  except:
+    - master
 
 pages:
   script:
-    # Install brotli
-    - apt-get update
-    - apt-get install -y brotli
-    # Install Dart Sass
-    - curl -LJO https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz
-    - tar -xf dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz
-    - cp -r dart-sass/ /usr/local/bin
-    - rm -rf dart-sass*
-    - export PATH=/usr/local/bin/dart-sass:$PATH
-    # Install Hugo
-    - curl -LJO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-    - apt-get install -y ./hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-    - rm hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-    # Install Node.js
-    - curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION} | bash -
-    - apt-get install -y nodejs
-    # Install Node.js dependencies
-    - "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-    # Build
-    - hugo --gc --minify
-    # Compress
-    - find public -type f -regex '.*\.\(css\|html\|js\|txt\|xml\)$' -exec gzip -f -k {} \;
-    - find public -type f -regex '.*\.\(css\|html\|js\|txt\|xml\)$' -exec brotli -f -k {} \;
+    - hugo
   artifacts:
     paths:
       - public
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  only:
+    - master
