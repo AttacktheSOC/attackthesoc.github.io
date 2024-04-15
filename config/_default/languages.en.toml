@@ -15,7 +15,7 @@ title = "Attack the SOC"
   # copyright = "Copy, _right?_ :thinking_face:"
 
  [author]
-   name = "Attack the SOC"
+   name = "Dylan Tenebruso"
    image = "img/dylan.jpg"
    headline = "Defend, Detect, Respond: Exploring Azure Security and more.."
    bio = "Infosec engineer with a focus in azure security, detection engineering and threat hunting"

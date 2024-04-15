@@ -1,5 +1,5 @@
 +++
-title = 'Enhancing Your Entity Timelines: Sentinel Activities in the Unified Microsoft Defender XDR'
+title = 'Enhancing Your Entity Timelines: Sentinel Activities in the Unified Microsoft Defender XDR Portal'
 description = 'With the recent release of the Microsoft unified security operations platform in the Defender portal I wanted to focus in on one specifically cool feature brought over that could help SOC analysts speed up their investigations.'
 date = 2024-04-13T13:57:30-04:00
 draft = false
@@ -7,9 +7,9 @@ tags = ['sentinel', 'xdr', 'secops']
 categories = ['Azure']
 authors = ['Dylan Tenebruso']
 +++
-With the recent release of the Microsoft unified security operations platform in the Defender portal which is the integration of Microsoft Sentinel and Microsoft Defender XDR, there has been A LOT to take in. Both mentally and technologically. All the new features and settings to take advantage of has been overwhelming, in a really good way!
+With the recent release of the Microsoft unified security operations platform in the Defender portal which is the integration of Microsoft Sentinel and Microsoft Defender XDR, there has been A LOT to take in. Both mentally and technologically. All the new features and settings to take advantage of has been overwhelming in a really good way!
 
-There's an endless amount of posts coming out about all of it so I figured why not add to the pile, right?
+There's an endless amount of posts coming out about all of it so I figured why not add to the pile.
 
 The specific feature I'm covering in this post is one that I haven't heard too much hype about but I personally think has loads of potential when it comes to making a SOCs life a whole lot easier. And that's:
 
@@ -87,23 +87,25 @@ For this next part let's make sure we give the analyst that high-quality and dig
 Context context context
 {{< /typeit >}}
 
-That's it. Click the Next button at the bottom to allow the review and validate preocess to take place. Hit **Create**
+That's it. Click the Next button at the bottom to allow the *review + validate* process to take place. Hit **Create**
 
 ## How it works
-According to the docs, every time you visit an entity page all enabled activites with run for that entity. This is why they put such strong emphasis on the *strong identifiers*. 
+According to the docs, every time you visit an entity page all enabled activites will run for that entity. 
 
-If your query is syntax is all good and an activity has occurred, you will be immediately rewarded with the fruits of your labor.
+If your query syntax is all good and an activity has occurred since publishing the custom activity, you will be immediately rewarded with the fruits of your labor.
 ![Sentinel activities table filling in](successful_sentinel_activity.png)
 
-If you're not seeing any results after initiating a monitored activity my guess is on the identifier. Be sure to read those docs linked above.
+If you're not seeing any results after having initiated a monitored activity my money is on the identifier. Be sure to read those docs linked above to ensure you're using the right identifier for your query.
 
 ## Observations
-One thing you quickly notice is that clicking on the activities doesn't bring up any other action or any new information. It'd be cool if they could extend the **Go hunt** feature here to bring you to a query in the Advanced Hunting page to pivot off the data. Following up on this, the only data you do see is the data you put into the *Activity title* so make sure your get that data formatted into the title.
+One thing you quickly notice is that clicking on the activities doesn't bring up any other action or any new information. It'd be cool if they could extend the **Go hunt** feature here to bring you to a query in the Advanced Hunting page to pivot off the data. Following up on this, the only data you do see is the data you put into the *Activity title* so make sure you get that data formatted in.
 
-One other caveat I noticed was that you only see activities that occur after the publish time of the Sentinel activity. Meaning I don't see any historical lookups in the activity table. I performed monitored actions 5 times but only saw the 3 actions taken after publishing the activity.
+One other caveat I noticed was that you only see activities that occur after the publish time of the new custom activity you created. Meaning I don't see any historical lookups in the activity table. I performed monitored actions 5 times but only saw the 3 actions taken after publishing the activity.
 
 Finally, I'm assuming these activities are being stored somewhere, otherwise I'd imagine that historical activities would show up. Given this assumption, it'd be really cool to see these activities in the entity timeline as well. Even if there was an api we could hit to pull these activities out and inject them into the entity timelines, I'd be happy. [WindowsDefenderATP API to access 'Event.Write' to timeline](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/api/exposed-apis-create-app-webapp?view=o365-worldwide)
 
 
 # Thank you for reading
-Hopefully this helped you either find out about this feature or spark some ideas! Now go create some cool things with it
+Hopefully this helped you either learn about this feature or spark some ideas! Now go create something and share with the community
+
+Until next time on, Attack the SOC!
