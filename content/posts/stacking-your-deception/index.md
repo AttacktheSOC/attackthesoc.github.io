@@ -4,7 +4,7 @@ date = 2024-04-21T12:37:26-04:00
 categories = ["Deception Engineering", "Azure"]
 tags = ["deception", "canaries", "mde", "Defender XDR", "honeytokens"]
 authors = ["Dylan Tenebruso"]
-description = "add description"
+description = "Exploring the idea of taking two amazing Deception toolsets and stacking them for unlimited potential and reach within your network."
 draft = false
 +++
 ![Defender XDR and Thinkst Canarytokens](feature.png)
