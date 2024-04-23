@@ -37,8 +37,8 @@ code:
   copied: "Copied"
 
 error:
-  404_title: "Page Not Found :confused:"
-  404_error: "Error 404"
+  404_title: "HTTP 404 - I wasn't given a name :confused:"
+  404_error: "Woah, hey. Who let you in here?"
   404_description: "It seems that the page you've requested does not exist."
 
 footer:
