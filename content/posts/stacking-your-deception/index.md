@@ -1,12 +1,17 @@
 +++
 title = "Stack Your Deception: Stacking MDE Deception Rules with Thinkst Canarytokens"
 date = 2024-04-21T12:37:26-04:00
+lastmod = 2024-04-26T23:30:10-04:00
 categories = ["Deception Engineering", "Azure"]
 tags = ["deception", "canaries", "mde", "Defender XDR", "honeytokens"]
 authors = ["Dylan Tenebruso"]
 description = "Exploring the idea of taking two amazing Deception toolsets and stacking them for unlimited potential and reach within your network."
 draft = false
 +++
+{{< badge>}}Updated{{< /badge>}}
+{{< alert "edit">}}
+Changelog: corrected Path for custom lures
+{{< /alert>}}
 ![Defender XDR and Thinkst Canarytokens](feature.png)
 A relatively new and straight forward feature pushed to client machines through Microsoft Defender for Endpoint as part of Defener XDR is the Deception capability. For those who may not know, **Deception** tech involves deploying decoy systems, data, or networks to deceive and trap attackers, enhancing threat detection and response capabilities. It helps organizations detect and thwart malicious activities by luring attackers away from their real targets.
 
@@ -83,12 +88,12 @@ In your Microsoft Defender XDR dashboard, to turn on the Deception capabilities,
       * For the exe: 
       ![Custom exe / binary lure](custBinaryLure.png)
       ```SQL 
-      C:\{HOME}\Documents\AdminTools\
+      {HOME}\Documents\AdminTools
       ```
       * For the PDF:
       ![Custom pdf token](pdflure.png)
       ```SQL
-      C:\{HOME}\Documents\Employee Earnings\2024\April\3\
+      {HOME}\Documents\Employee Earnings\2024\April\3
       ```
     3) Select whether or not you want to deploy this on every device that's in-scope. Seeing the same file in the same spot on many devices is a pretty big sign of something *phishy*.
     4) Select whether the file should be hidden or not. Again, would this file be hidden? Will the attacker run *dir /a*?
