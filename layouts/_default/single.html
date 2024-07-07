@@ -13,7 +13,7 @@
   {{ end }}
   {{ end }}
 
-  <header id="single_header" class="mt-5 max-w-prose">
+  <header id="single_header" class="mt-5 max-w-fit">
     {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
     {{ partial "breadcrumbs.html" . }}
     {{ partial "twitter_cards.html" . }}
@@ -62,7 +62,7 @@
 
   </header>
   
-  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+  <section class="flex flex-col max-w-fit mt-0 prose dark:prose-invert lg:flex-row">
     
     {{ if or (and (.Params.showTableOfContents | default (.Site.Params.article.showTableOfContents | default false)) (in
     .TableOfContents "<ul")) (.Site.Params.article.showRelatedPosts | default false) }} <div
@@ -80,7 +80,7 @@
         
         {{ partial "series/series.html" . }}
 
-        <div class="article-content max-w-prose mb-20">
+        <div class="article-content max-w-fit mb-20">
           {{ .Content | emojify }}
         </div>
         
