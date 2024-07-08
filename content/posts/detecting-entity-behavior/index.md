@@ -4,7 +4,7 @@ date = 2024-07-07T13:34:24-04:00
 categories = ["Detection Engineering", "Threat Hunting", "Sentinel", "Defender"]
 tags = ["Detection", "KQL", "Sentinel", "User Behavior", "Entity Behavior", "UBA", "UEBA", "Correlation"]
 authors = ["Dylan Tenebruso"]
-description = "Exploring methods on developing custom User and Entity behavior detection ideas that work in our envrionment. Focusing on efficiency by ensuring our detection rules are specific and deliberate. Staying specific by utilizing log correlation and being deliberate by asking ourselves a simple question. Why?"
+description = "Exploring methods on developing custom User and Entity behavior detection ideas that work in our envrionment. Focusing on efficiency by ensuring our detection rules are specific and deliberate. Staying specific by utilizing log correlation and being deliberate by asking ourselves a simple question, why?"
 draft = false
 +++
 ##  Like Nailing Jell-o to a Wall
@@ -50,7 +50,7 @@ Continue this by flipping the state/condition designations. If the condition "Sa
 
 This method allows us to be specific and deliberate with our alerting.  By stacking it with other methods such as mind maps, waterfall modeling, and data flow diagrams, we mitigate the challenge that specificity creates gaps in visibility. Furthermore, we can always confirm and validate our detections via frameworks like [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team), [msInvader](https://github.com/mvelazc0/msInvader), and/or [TTPForge](https://github.com/facebookincubator/TTPForge).
 
-## Achieving Specificity using Log correlation
+## Achieving Specificity Using Log Correlation
 
 Now that we can define the states/conditions we want to build our detections around, we need to ensure that we're not burying ourselves in False-positive alerts (FPs) by holding to the "specific and deliberate". Specificity can achieved by correlating data between different event logs and data sources. Being deliberate comes from asking ourselves the question, "Why?". 
 
@@ -66,7 +66,7 @@ Here, we'll start with a **State**: Anomalous Credentials exist in KCL for an AD
 
 We got there by setting a goal to create detections around user authentication. After some research around authentication we documented and generated diagrams of the auth flows in our organization. During this process, we learned how our implementation of Windows Hello for Business (WHfB) works. Finally, we brainstormed some undesirable states/conditions that could exist in our environment.
 
-Now to ask ourselves, why this detection matters? This gives us an indication of what sort of ROI we can expect from this rule. Roughly, our answer to "Why?" is our business justification for the time spent working on this detection (planning+writing+testing+deploying+maintaining). 
+Now to ask ourselves, why this detection matters? This gives us an indication of what sort of ROI we can expect from this rule. Roughly, our answer to "Why?" is our business justification for the time spent working on this detection (planning + writing + testing + deploying + maintaining).
 
 Why: Values stored in the msDS-KeyCredentialLink attribute function as an alternate set of persistent credentials for the associated object. This means they'll survive a password change and an attacker who added those credentials can use them to authenticate as that object in our environment.
 
@@ -120,7 +120,7 @@ Microsoft XDR makes this a possibility with the DeviceNetworkInfo table because 
 
 We pull the correlated logon in via the *Logon ID* within the 5136 EventData with the Name value of "SubjectLogonId". The correlated 4624 of the same Logon ID gives us the source IP address and the workstation name via the EventData with the Name values "IpAddress" and "WorkstationName" respectively.
 
-Finally, we're going to query the DeviceNetworkInfo table where the DeviceName == WorkstationName and confirm whether or not the IP address used for the logon was ever actually associated with the computer by checking against the DeviceNetworkInfo column **IPAddresses**.
+Finally, we're going to query the DeviceNetworkInfo table where the DeviceName == WorkstationName and confirm whether or not the IP address used for the logon was ever actually associated with the computer by checking against the DeviceNetworkInfo column IPAddresses.
 
 #### KQL
 
@@ -129,7 +129,8 @@ Let's write this out in KQL:
 ```SQL
 let domainName = ".domain.com"
 let kcl_added = materialize ( SecurityEvent
-| where EventID == 5136 and OperationType == @"%%14674" // all DS object modified events where a value add operation took place
+// all DS object modified events where a value add operation took place
+| where EventID == 5136 and OperationType == @"%%14674"
 // now to parse out the EventData XML values to only pull writes to the KCL 
 | project EventData
 | extend EventDataXml = parse_xml(EventData)
@@ -140,15 +141,17 @@ let kcl_added = materialize ( SecurityEvent
 | evaluate bag_unpack(bag)
 | extend AttributeLDAPDisplayName = column_ifexists('AttributeLDAPDisplayName','x'), OperationType = column_ifexists('OperationType','x'), SubjectLogonId = column_ifexists('SubjectLogonId','x')
 | project AttributeLDAPDisplayName, OperationType, SubjectLogonId
+// focus in on events related to the KCL attribute
 | where AttributeLDAPDisplayName == "msDS-KeyCredentialLink"
 | project SubjectLogonId);
 let correlateLogon = materialize ( SecurityEvent
+// pull in the correlated logon event for the KCL modification
 | where EventID == 4624
 | where TargetLogonId in (kcl_added) // looking for the correlated logon events via the SubjectLogoId
 | project IpAddress, WorkstationName = tolower(strcat(WorkstationName, domainName)));
 DeviceNetworkInfo
 | join kind=inner correlateLogon on $left.DeviceName == $right.WorkstationName
-// check for any logons where the IP does not match any known IPs associated with the host
+// check for any logons where the IP does not match any known IPs associated with the modified computer object; aka the Subject of the kcl modification
 | where IPAddresses !has IpAddress
 | summarize count() by TargetComputer = WorkstationName, AttackerIP = IpAddress
 | project-away count_
@@ -166,7 +169,7 @@ Decide on an area of focus > research and document your environment > ideate on 
 
 Here are a few non-specific ideas off the cuff, see if you can come up with a detection system for them. What would lead to the state being true? And, what are the symptoms of such a condition existing? Draft your detection ideas and then ask yourself, Why? If you don't have a solid answer then perhaps that rule doesn't make the cut:
 
-1. Using Azure Arc for AMA only? Azure Arc is not deployed in Monitor Mode. How did it get that way?
+1. Using Azure Arc for AMA only? Azure Arc is not deployed in Monitor Mode. How did it get that way? What unauthorized activity can you detect on for servers not in Monitor Mode?
 2. AiTM using NTLMrelayx on the network. Symptoms might be DeviceNetowrkEvent.RemoteURL == server names not resolving to the correct IP (DeviceNetowrkEvent.RemoteIP) according to the DeviceNetworkInfo.IPAddresses column. Or common websites resolving to private IPs
 3. IDP logs? Hopefully, you're not still allowing SMS and email for MFA but if you are; The same phone number/email is set for multiple users. 
 
@@ -177,6 +180,6 @@ Take a *Detection-in-Depth* approach that layers tools and techniques to support
 
 # Thank you for reading
 
-As always, I hope this helped you got the mind ooze percolating and you're filtering out some ideas! Maybe you even learned something new. Now go create something and share it with the community.
+As always, I hope this helped you percolate the mind juice and filter out some ideas! Maybe you even learned something new. Now go create something and share it with the community.
 
 Until next time on, Attack the SOC!
