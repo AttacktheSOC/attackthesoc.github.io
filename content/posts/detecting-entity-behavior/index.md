@@ -54,7 +54,7 @@ This method allows us to be specific and deliberate with our alerting.  By stack
 
 Now that we can define the states/conditions we want to build our detections around, we need to ensure that we're not burying ourselves in False-positive alerts (FPs) by holding to the "specific and deliberate". Specificity can achieved by correlating data between different event logs and data sources. Being deliberate comes from asking ourselves the question, "Why?". 
 
-That second tool might be the most important one you can add to your utility belt and it's one I credit my colleague and mentor, Steve, for drilling into my head every day... or at least making the effort to, the rest is on me to use it.
+That second tool might be the most important one you can add to your utility belt and it's one I credit my colleague and mentor, Steve [@CowbellSteve](https://x.com/cowbellsteve), for drilling into my head every day... or at least making the effort to, the rest is on me to use it.
 
 ![number one tool in my utility belt](utility_belt.gif)
 
