@@ -3,6 +3,9 @@ public/
 resources/
 exampleSite/resources/
 
+# Drafts and WIP
+content/posts/ms-xdr-optimizing-the-soc/
+content/posts/business-reqs-and-cyber-threats/
 
 # Binaries for programs and plugins
 *.exe
