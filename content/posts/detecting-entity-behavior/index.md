@@ -10,8 +10,6 @@ draft = false
 ##  Like Nailing Jell-o to a Wall
 In a poll I ran asking the community which detection domains could use more of their attention, User Behavior reigned supreme.
 
-{{< twitter user="DylanInfosec" id="1785997692855816626" >}}
-
 Most of the detections in our environments for User and Entity Behavior Analytics (UEBA) originate from closed-source machine learning-based detections that present outliers in our log data. *Anomalies*.
 
 An example of a possible out-of-the-box UEBA detection:

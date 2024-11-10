@@ -23,5 +23,5 @@ title = "Attack the SOC"
      { email = "mailto:info@attackthesoc.com" },
      { github = "https://github.com/attackthesoc" },
      { linkedin = "https://www.linkedin.com/in/dylten6/" },
-     { twitter = "https://twitter.com/dylaninfosec" }
+     { bluesky = "https://bsky.app/profile/dylaninfosec.bsky.social" }
    ]
