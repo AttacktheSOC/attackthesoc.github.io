@@ -67,3 +67,7 @@ googleAnalytics = "G-GLEB56JZEE"
       name = 'fragmentrefs'
       type = 'fragments'
       weight = 10
+[privacy]
+  [privacy.googleAnalytics]
+    disable = false
+    respectDoNotTrack = true
