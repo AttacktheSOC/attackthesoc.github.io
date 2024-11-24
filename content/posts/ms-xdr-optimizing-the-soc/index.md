@@ -14,7 +14,7 @@ Here's you:
 
 Chasing down a goalpost that seemingly grew wings. You're hemorrhaging FPs, you have tons of undiagnosed system Health alerts and you have some unknown unknowns, not because "that's just the nature of things" but because you haven't given yourself a minute to sit back and think.
 
-In this post, we're going to look at some of the functionality that's built into the Microsoft Unified SOC Operations platform and some that isn't to help you clean up and get your SOC all optimized and stuff..
+In this post, we're going to look at some of the functionality that's built into the Microsoft Unified SOC Operations platform and some that isn't to help you clean up and get your operations center optimized and back to a clean state.
 
 ## Issues to Solve
 1. Data Collection health

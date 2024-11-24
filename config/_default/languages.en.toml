@@ -18,10 +18,10 @@ title = "Attack the SOC"
    name = "Dylan Tenebruso"
    image = "img/dylan.jpg"
    headline = "Defend, Detect, Respond: Exploring Azure Security and more.."
-   bio = "Infosec engineer with a focus in azure security, detection engineering and threat hunting"
+   bio = "Infosec engineer with a focus on azure security, detection engineering and threat hunting"
    links = [
      { email = "mailto:info@attackthesoc.com" },
      { github = "https://github.com/attackthesoc" },
      { linkedin = "https://www.linkedin.com/in/dylten6/" },
-     { bluesky = "https://bsky.app/profile/dylaninfosec.bsky.social" }
+     { bluesky = "https://bsky.app/profile/attackthesoc.com" }
    ]
