@@ -74,7 +74,7 @@ disableTextInHeader = false
   showTaxonomies = false
   showAuthorsBadges = false
   showWordCount = true
-  sharingLinks = [ "linkedin", "bluesky", "email"]
+  sharingLinks = [ "linkedin", "bluesky", "email", "twitter"]
   showZenMode = true
 
 [list]
