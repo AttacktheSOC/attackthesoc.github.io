@@ -14,13 +14,13 @@ Here's you:
 
 Chasing down a goalpost that seemingly grew wings. If you turn around you'll see that you're hemorrhaging FPs, you have tons of undiagnosed system health alerts and you have some unknown unknowns, not because "that's just the nature of things" but because you haven't given yourself a minute to sit back and think.
 
-In this post, we're going to look at some of the functionality that's built into the Microsoft Unified SOC Operations platform and some that isn't to help you clean up and get your operations center optimized and back to a clean state. A majority of this post  a collection of solutions I found throughout the past couple years and is the work of some other fantastic folks who took the time to build these solutions and share them with everyone. Give them a thanks if you implement it.
+In this post, we're going to look at some of the functionality that's built into the Microsoft Unified Security Operations platform and some that isn't to help you clean up and get your SOC optimized and back to a clean state. A majority of this post a collection of solutions I found throughout the past couple years and is the work of some other fantastic folks who took the time to build these solutions and share them with everyone. Give them a thanks.
 
 ## Issues to Solve
 1. Data Collection health
 2. False-positives
-3. Playbook Health
-4. Att&ck Coverage
+3. Att&ck Coverage
+4. Playbook Health
 
 ## Data Collection Health
 ### Sentinel Workbook
@@ -130,7 +130,7 @@ Continuing our conversation on whether or not alerts that we have in our queue a
 
 Another friend of ours, [Michalis Michalos](https://twitter.com/Cyb3rMik3) of [https://www.michalos.net/](https://www.michalos.net/) has written an in-depth guide on [Operationalizing MITRE ATT&CK with Microsoft Security - Part 1](https://www.michalos.net/2023/05/29/operationalizing-mitre-attck-with-microsoft-security-part-1/) and  [Part 2](https://www.michalos.net/2024/03/25/operationalizing-mitre-attck-with-microsoft-security-part-2/). In this guide, Michalis goes over how the Att&ck framework is utilized throughout the Microsoft Security ecosystem and how we can implement it in our detection and analytic rules. In part 2, he introduces the Sentinel Att&ck Map which is the greatest tool in assuring yourself and your supervisors that you are indeed covering your assets by offering a visual matrix with realtime mappings of the rule and queries you currently have in your environment. 
 
-### Use Case Mapper Workbook (Now That's What I Call a Sentinel Workbook 3)
+### Use Case Mapper Workbook
 
 Yet another great find by my colleague was this awesome workbook just recently released by [Mario Cuomo](https://twitter.com/Mario_CuomoIT) with Microsoft and at [his website](https://mariocuomo.github.io/). His workbook(solution) [Use Cases Mapper](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/introducing-the-use-cases-mapper-workbook/4202058) provides you with a tool to identify solutions (Analytic rules and Hunting queries) available in the Content Hub that map to specific Att&ck framework tactics and show you the coverage that you have. This in conjunction with the information you learned from Michalis should have you covered.
 
@@ -192,9 +192,9 @@ And last, if you're a prospective Microsoft customer or if you're already in the
 
 ## Final Thoughts
  
-This is by no means an exhaustive list but is a great start for getting our security operations in order. We're ensuring that the data we need is coming in and we have ways to indeitify when this system breaks. Then we're getting rid of exhausting alerts to prevent fatigue in our team and open time for more rewarding work. Next we're ensuring the alerts that we do have have a usecase and can be mapped to meaningful TTPs. FInally we're looking at ways of creating accountability for our automations, alerts for failures and workbooks to visualize whats going on.
+This is by no means an exhaustive list but is a great start for getting our security operations in order. We're ensuring that the data we need is coming in and we have ways to identify when this system breaks. Then we're getting rid of exhausting alerts to prevent fatigue in our team and open time for more rewarding work. Next we're ensuring the alerts that we have can be mapped to meaningful TTPs. Finally, we're looking at ways of creating accountability for our automations, alerts for failures and workbooks to visualize the performance of each playbook in our environment.
 
-I'll leave you with these final words; a lot of times we're looking to implement the newest solution, create the next detection for the latest intel drop, and integrate another SAAS applications logstream. Rarely do we go back to tweak that noisy rule or add that line in our automation to make it run a little more efficiently. Instead of taking a "let's get it running now, I'll fix it up later" approach, commit to tackling it right now.
+I'll leave you with these final words; a lot of times we're looking to implement the newest solution, create the next detection for the latest intel drop, and integrate another SAAS applications logstream. Rarely do we go back to tweak that noisy rule, create a smarter parser, or add that line in our automation to make it run a little more efficiently. It's all just piling up higher and higher like a bunch of Jenga blocks. Instead of taking a "let's get it running now, I'll fix it up later" approach, commit to tackling it right now.
 
 [Commit to taking time this week to clean things up](https://twitter.com/intent/tweet/?text=I'm%20taking%20some%20time%20this%20week%20to%20clean%20up%20and%20optimize%20the%20SOC)
 
@@ -204,3 +204,4 @@ I'll leave you with these final words; a lot of times we're looking to implement
 As always, I hope you found some of this useful and can walk away with a gameplan to make your environment a little more efficient. The folks mentioned in this article are all great members of the community who are constantly building and sharing, be sure to give them a follow, you will learn a lot and will not regret it. Now go create something and share it with the community.
 
 Until next time on, Attack the SOC!
+![What befalls others today, may be your own fate tomorrow...](harakiri.png)
