@@ -16,15 +16,15 @@
   weight = 10
 
 [[main]]
-#  name = "Me.about()"
-#  pageRef = "about"
-#  weight = 20
+  name = "AboutMe()"
+  pageRef = "about.md"
+  weight = 20
 
 #[[main]]
-#  name = "example sub-menu 1"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
+# name = "example sub-menu 1"
+# parent = "Posts"
+# pageRef = "posts"
+# weight = 20
 
 #[[main]]
 #  name = "example sub-menu 2"
