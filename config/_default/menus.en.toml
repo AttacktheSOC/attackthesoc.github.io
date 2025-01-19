@@ -20,17 +20,54 @@
   pageRef = "about.md"
   weight = 20
 
-#[[main]]
-# name = "example sub-menu 1"
-# parent = "Posts"
-# pageRef = "posts"
-# weight = 20
+[[main]]
+ name = "Community"
+ weight = 30
 
-#[[main]]
-#  name = "example sub-menu 2"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
+[[main]]
+  name = "KQL Search"
+  parent = "Community"
+  url = "https://kqlsearch.com"
+
+[[main]]
+  name = "Michalis Michalos"
+  parent = "Community"
+  url = "https://www.michalos.net/"
+
+[[main]]
+  name = "Bert-Jan Pals"
+  parent = "Community"
+  url = "https://kqlquery.com/"
+
+[[main]]
+  name = "Fabian Bader"
+  parent = "Community"
+  url = "https://cloudbrothers.info/en/"
+
+[[main]]
+  name = "Ru Campbell"
+  parent = "Community"
+  url = "https://campbell.scot/"
+
+[[main]]
+  name = "Alex Verboon"
+  parent = "Community"
+  url = "https://www.verboon.info/"
+
+[[main]]
+  name = "Ugur Koc"
+  parent = "Community"
+  url = "https://ugurkoc.de/"
+
+[[main]]
+  name = "SecurityAura"
+  parent = "Community"
+  url = "https://medium.com/@securityaura"
+
+[[main]]
+  name = "Kusto Insights"
+  parent = "Community"
+  url = "https://kustoinsights.substack.com/"
 
 #[[subnavigation]]
 #  name = "An interesting topic"
@@ -42,16 +79,6 @@
 #  pre = "github"
 #  pageRef = "categories/awesome"
 #  weight = 20
-
-#[[main]]
-#  name = "Categories"
-#  pageRef = "categories"
-#  weight = 20
-
-#[[main]]
-#  name = "Tags"
-#  pageRef = "tags"
-#  weight = 30
 
 
 # -- Footer Menu --

@@ -6,16 +6,16 @@ layout = 'simple'
 +++
 
 ## 👋 Hello!  
-I'm Dylan, an IT Security professional with 10 years of experience and a passion about safeguarding the cloud and diving deep into the evolving landscape of information security.
+I'm Dylan, an Information Security professional with 10 years of experience and a proven track record of aligning security architecture with business goals. Skilled in designing, implementing, and managing advanced security solutions in Azure-based environments with a focus on Entra ID, Microsoft Defender XDR, and Azure Automation. Passionate about cultivating a culture of community-driven collaboration, promoting detection-in-depth and teaching others the lessons I learned the hard way.
 
 ---
 
 ## 🌟 Quick Facts  
-- **📍 Location:** USA 
-- **💼 Occupation:** IT Security Specialist (IAM & DEaTH) 
+- **📍 Location:** USA
+- **💼 Occupation:** IT Security Specialist (IAM & DEaTH)
 - **🎓 Education:** Self-taught
 - **🍄 Interests:** Family, getting lost in nature, and learning
-- **🌱 Currently Learning:** Azure Automation  
+- **🌱 Currently Learning:** Azure Automation
 
 ---
 
@@ -35,6 +35,7 @@ Find me online:
 - **LinkedIn:** [Dylan Tenebruso](https://www.linkedin.com/in/dylten6/)
 - **GitHub:** [AttacktheSOC](https://github.com/AttacktheSOC)  
 - **Twitter:** [@DylanInfosec](https://twitter.com/DylanInfosec)
+- **TechCommunity:** [DylanInfosec](https://techcommunity.microsoft.com/users/dylaninfosec/2394710)
 
 ---
 
@@ -43,11 +44,12 @@ When I’m not working, you can find me:
 - Learning Guitar (Death Metal)
 - Wood Carving  
 - Writing short stories
+- Meditating
 
 ---
 
 ## 📫 Get in Touch  
-I’d love to hear from you! Feel free to reach out via:  
+I'd love to hear from you! Feel free to reach out via:  
 - **Email:** [dylan@attackthesoc.com](mailto:dylan@attackthesoc.com)
 
 ---
