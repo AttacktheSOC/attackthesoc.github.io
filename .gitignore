@@ -5,6 +5,9 @@ exampleSite/resources/
 
 # Drafts and WIP
 content/posts/business-reqs-and-cyber-threats/
+content/posts/soc-informs-itops/
+content/posts/case-study-smb-okta-to-azure/
+content/posts/4-strategies-for-small-teams-xdr/
 
 # Binaries for programs and plugins
 *.exe

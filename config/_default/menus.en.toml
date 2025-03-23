@@ -65,6 +65,11 @@
   url = "https://medium.com/@securityaura"
 
 [[main]]
+  name = "Nathan McNulty"
+  parent = "Community"
+  url = "https://nathanmcnulty.com/"
+
+[[main]]
   name = "Kusto Insights"
   parent = "Community"
   url = "https://kustoinsights.substack.com/"

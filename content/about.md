@@ -6,16 +6,15 @@ layout = 'simple'
 +++
 
 ## 👋 Hello!  
-I'm Dylan, an Information Security professional with 10 years of experience and a proven track record of aligning security architecture with business goals. Skilled in designing, implementing, and managing advanced security solutions in Azure-based environments with a focus on Entra ID, Microsoft Defender XDR, and Azure Automation. Passionate about cultivating a culture of community-driven collaboration, promoting detection-in-depth and teaching others the lessons I learned the hard way.
+I'm Dylan, an Information Security professional with 10 years of experience and a proven track record of aligning security architecture with business goals. Skilled in Azure security architecture with a focus on Entra ID, Microsoft Defender XDR, and Azure Automation. Passionate about cultivating a culture of community-driven collaboration, promoting defense and detection-in-depth, and teaching others the lessons I learned the hard way.
 
 ---
 
 ## 🌟 Quick Facts  
 - **📍 Location:** USA
 - **💼 Occupation:** IT Security Specialist (IAM & DEaTH)
-- **🎓 Education:** Self-taught
+- **🎓 Certifications:** CompTIA [Network+](https://www.credly.com/badges/cdb5ed70-3460-4dd9-9039-7a7fb10bab4b/public_url), [Security+](https://www.credly.com/badges/4b3f14eb-a9a2-4b52-a205-618af42615d6/public_url), [CySA+](https://www.credly.com/badges/f071c230-384e-4bda-812f-aefc0adccd9b/public_url)
 - **🍄 Interests:** Family, getting lost in nature, and learning
-- **🌱 Currently Learning:** Azure Automation
 
 ---
 
@@ -41,10 +40,10 @@ Find me online:
 
 ## 🎯 Hobbies  
 When I’m not working, you can find me:  
-- Learning Guitar (Death Metal)
+- Reading
 - Wood Carving  
 - Writing short stories
-- Meditating
+- Learning to play the guitar
 
 ---
 
