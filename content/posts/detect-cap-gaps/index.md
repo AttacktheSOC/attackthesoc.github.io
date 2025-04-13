@@ -9,7 +9,7 @@ draft = false
 +++
 Conditional Access Policies are the sentry standing at the gateway of your Azure resources. Every organization will have unique rules for the various needs of the business and the logic can get complicated very quickly.
 
-If I asked what your Conditional Access Strategy is at a high level, I bet you can provide the full rundown. You would describe the concept of how it should work. Should. Problem is, and through no fault of your own, as your requirements shift so to does the possibility for gaps to manifest within your design. Eventually, it becomes inevitable.
+If I asked what your Conditional Access strategy is at a high level, I bet you can provide the full rundown. You would describe the concept of how it should work. Should. Problem is, and through no fault of your own, as your requirements shift so to does the possibility for gaps to manifest within your design. Eventually, it becomes inevitable.
 
 It'd be great if we could take that high-level concept, flip it and turn it into an actionable alert. We know what our CAPs should allow, therefore we ought to know what we're attempting to prevent. Let's take that and create some detections to find current gaps in our policies and catch any that may be created in the future.
 
@@ -21,7 +21,7 @@ There are tons of other blogs and tools out there for just this purpose, granted
 * [CAP 'What if' Simulation - DCToolbox](https://danielchronlund.com/2023/11/24/conditional-access-what-if-simulation-with-powershell/) - found this in response to Twitter post from [Erica Zelic](https://twitter.com/IAMERICAbooted). Looks like a pretty cool PowerShell What if simulator, similar to Maester, with some crazy looking UI.
 * [MFASweep](https://github.com/dafthack/MFASweep) - A tool developed by [Beau Bullock](https://twitter.com/dafthack) that performs auth attempts to Microsoft services with provided credentials and reports back where single-factor gaps are laying in wait.
 
-## KQL - CAP GAP Abuse Detection
+## CAP GAP Violation Detection
 Clearly, there are plenty of options and I'm sure there are more I missed, not to mention the countless articles on the subject.
 
 To reiterate, this flavor of CAP gap detection is to detect on activity that, according to our personal understanding of our CAP strategy, should not occur. Let's use a real world example based on the Conditional Access Policy templates provided by Microsoft.
@@ -108,7 +108,7 @@ This is query will help you to identify resources in your environment which have
 
 **CAP Strategy**: Require MFA to all resources
 
-**What shouldn't happen**: There should never be a single-factor signins to any resource unless explicit exclusions were made
+**What shouldn't happen**: There should never be single-factor signins to any resource unless explicit exclusions were made
 
 **Detection**: If any user successfully initializes a session via single-factor authentication to any unexpected resource
 
