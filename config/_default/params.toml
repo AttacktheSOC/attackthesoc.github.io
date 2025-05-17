@@ -135,11 +135,11 @@ disableTextInHeader = false
   # domain = "llama.yoursite.com"
 
 [buymeacoffee]
- identifier = "attackthesoc"
- globalWidget = true
+ #identifier = "attackthesoc"
+ #globalWidget = true
  # globalWidgetMessage = "Hello"
- globalWidgetColor = "#FFDD00"
- globalWidgetPosition = "Right"
+ #globalWidgetColor = "#FFDD00"
+ #globalWidgetPosition = "Right"
 
 [verification]
   # google = ""
