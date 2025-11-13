@@ -15,8 +15,6 @@ summaryLength = 0
 buildDrafts = false
 buildFuture = false
 
-googleAnalytics = "G-GLEB56JZEE"
-
 [imaging]
   anchor = 'Center'
 
@@ -67,7 +65,3 @@ googleAnalytics = "G-GLEB56JZEE"
       name = 'fragmentrefs'
       type = 'fragments'
       weight = 10
-[privacy]
-  [privacy.googleAnalytics]
-    disable = false
-    respectDoNotTrack = true

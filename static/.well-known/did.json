@@ -1,0 +1,48 @@
+{
+  "id": "did:web:attackthesoc.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:attackthesoc.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://attackthesoc.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/f5f5c0ac-833d-4299-a2ea-4976d9110b9b"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#9c85adbde29742a7992857e4a345975fvcSigningKey-cce22",
+      "controller": "did:web:attackthesoc.com",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "aoWErdFe9Syd1DlJd-ie2_SMBbY98PHb3hdbLmF3GZc",
+        "y": "3m6WtXp_HaqFCb5Gzg21N0XbU1r42pBrnrzYb_knbdg"
+      }
+    }
+  ],
+  "authentication": [
+    "#9c85adbde29742a7992857e4a345975fvcSigningKey-cce22"
+  ],
+  "assertionMethod": [
+    "#9c85adbde29742a7992857e4a345975fvcSigningKey-cce22"
+  ]
+}
