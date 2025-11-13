@@ -55,5 +55,3 @@ I'd love to hear from you! Feel free to reach out via:
 
 
 *"The only thing in our control is our own thoughts."* - Epictetus  
-
-Thanks for visiting my page! 😊
