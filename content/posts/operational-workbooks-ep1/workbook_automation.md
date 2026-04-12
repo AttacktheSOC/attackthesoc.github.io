@@ -32,7 +32,7 @@ Rename the HTTP request action to something simple like "manual" and set the **M
 
 You now have the head of your logic app completed, it should look something like this:
 
-![http-request-trigger](http_request_trigger.png)
+![http-request-trigger](http_request_trigger.PNG)
 
 ### The Workbook
 #### Export data to parameters
@@ -45,7 +45,7 @@ After finding or creating a table within the workbook that has the data you'd li
 
 Click "+ Add Parameter" and input the fields you'd like. For my workflow, I'll be sending this data to a playbook to auto-generate a change request on a false-positive WAF block. The idea is that when I click the row for a specific event, the specified column values will be exported as parameters. I'll use them to build out a simple JSON object that can then be parsed on the Logic App side and used to create a ticket.
 
-![step-settings](export_parameters.png)
+![step-settings](export_parameters.PNG)
 
 When adding a new parameter, the *Field to export* is the name of the column that holds the value you're looking to export. *Parameter name* will be the keyword you use everywhere else within the workbook to call the exported value. You use the parameter by specifying it within curly braces (i.e. the parameter I created for the value in the Rule column will be called with "{rulename}").
 
@@ -65,15 +65,15 @@ We'll need to enter the exported parameters from our ARG dropdowns into the ARM 
 {Subscription}/resourceGroups/{PlaybookResourceGroup}/providers/Microsoft.Logic/workflows/{PlaybookName}/triggers/{TriggerName}/run?api-version=2016-06-01
 ```
 
-![configure-arm-action-path](configure_uri.png)
+![configure-arm-action-path](configure_uri.PNG)
 
 Scroll down and this is where you'll use those selected-row parameters to build the body of the HTTP POST. Considering data manipulation in a Logic App is nobody's favorite pastime, I'd recommend keeping it simple, but you can make it as complex as required.
 
-![configure-body](configure_body.png)
+![configure-body](configure_body.PNG)
 
 After everything has been completed, hit that Done Editing button and Save. Give that **Run Microsoft Sentinel Playbook** button a press to ensure the POST request looks right.
 
-![test-run](test_run.png)
+![test-run](test_run.PNG)
 
 {{<alert "notice">}} One thing to keep in mind here is that we're taking suspected attack data and projecting it as input into another process. URLs, code, process command lines, etc. are being taken out of our logs and sent somewhere. Make sure you understand where the data is going and how the data will be used. You might notice that a few of the example events (XSS) can perform HTML injection right in our workbook by using the URI parameter.
 
@@ -85,7 +85,7 @@ With our Workbook completed and confirmed to be sending the data we require, we 
 
 Anyway, to be able to easily use our parameters within the Logic App, we'll need to set up a 'Parse JSON' action. Simply copy the JSON structure you created in the Workbook and, on the Parse JSON action, select the "Use sample payload to generate schema" button at the bottom of the action details blade. Paste in your JSON and hit Done, and it will automatically build your schema.
 
-![parse-json](parse_json.png)
+![parse-json](parse_json.PNG)
 
 {{<alert "notice">}} If you suspect that some of your parameters may be empty at times (null), ensure that you account for that by modifying the **type** field for the specific value(s) with:
 ```json
@@ -106,7 +106,7 @@ After formatting everything, we can add the final action to our Logic App and pu
 ## Fruits of our labor
 Go back to your Workbook and select the row/data you plan to send over to the playbook. Hit **Send Microsoft Sentinel Playbook**, confirm the data to send, and check the run history of your Logic App (🤞 all green checks) to ensure that your escaping, if required, worked as expected in the final action's input.
 
-![checks-and-balances](checks_and_balances.png)
+![checks-and-balances](checks_and_balances.PNG)
 
 ## Final Thoughts
 Looking good, good lookin. What else can you add to the output to ensure the receiver has all the context they need? Instead of just single-row outputs, allow for the selection of multiple values. Take this workbook as a template to build out other operational workbooks.
@@ -115,7 +115,7 @@ Think outside the box... or outside this post. Don't limit yourself to just runn
 
 I'd be remiss to not acknowledge the ever-growing interest in how agents can be injected into just about every workflow in our lives. Begs the question, can some of your needs be handled by agentic reasoning? I'm sure they can and perhaps that is what we'll explore in the next installment of **Operational Workbooks**.
 
-![agentic-injection](agentic_injection.png)
+![agentic-injection](agentic_injection.PNG)
 
 ### Meretricious Dashboard Theory
 You stuck around this long? Wow. Ok then, get your tinfoil hats on.
