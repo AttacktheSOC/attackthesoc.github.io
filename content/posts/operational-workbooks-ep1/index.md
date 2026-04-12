@@ -1,6 +1,6 @@
 +++
 title = "Operational Workbooks Episode 1: Running a Playbook from a Workbook"
-date = 2026-4-12T05:21:43-00:00
+date = 2026-04-12T05:21:43-00:00
 categories = ["Sentinel", "Logic Apps", "Azure"]
 tags = ["Sentinel", "Workbooks", "Automation"]
 authors = ["Dylan Tenebruso"]
