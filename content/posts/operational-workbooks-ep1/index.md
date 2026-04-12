@@ -38,7 +38,7 @@ You now have the head of your logic app completed, it should look something like
 #### Export data to parameters
 Go to your Microsoft Defender portal > Microsoft Sentinel > Threat management > Workbooks. I'm using a modified version of the Microsoft Web Application Firewall (WAF) - Azure WAF workbook for the purposes of this article, but if you already have a specific use-case in mind then do it up!
 
-{{<alert "github">}} To follow along with this article, you can deploy the workbook here: [Modified Web Application Firewall Workbook](https://github.com)
+{{<alert "github">}} To follow along with this article, you can deploy the workbook here: [Modified Web Application Firewall Workbook](https://github.com/AttacktheSOC/Azure-SecOps/blob/main/Sentinel/Workbooks/Modified%20WAF%20Events%20playbook.json)
 {{</alert>}}
 
 After finding or creating a table within the workbook that has the data you'd like to send over to the playbook, go to the **Step Settings** and check the box "When items are selected, export parameters".
