@@ -100,7 +100,8 @@
   {{ end }}
   {{/* Social */}}
   {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
+  {{/* TEMP (modernization branch): Hugo removed the _internal/twitter_cards.html template. Posts already emit a Twitter/X card via the twitter_cards.html partial injected in single.html. To be replaced by Blowfish v3's head.html in Phase 2. */}}
+  {{/* {{ template "_internal/twitter_cards.html" . }} */}}
   {{/* Schema */}}
   {{ partial "schema.html" . }}
   {{/* Me */}}
