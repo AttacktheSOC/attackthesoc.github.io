@@ -29,7 +29,7 @@ To reiterate, this flavor of CAP gap detection is to detect on activity that, ac
 {{< alert "microsoft" >}}[Template Documentation](https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-old-require-mfa-admin) {{< /alert >}}
 
 
-![You have security, but is it securing?](steward.gif)
+{{< video "steward.mp4" "You have security, but is it securing?" >}}
  
 ### Require MFA for administrators
 This policy is pretty cut and dry.

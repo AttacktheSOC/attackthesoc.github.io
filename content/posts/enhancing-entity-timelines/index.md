@@ -37,7 +37,7 @@ You'll immediately notice two really cool things about this page.
 
 There's already a lot we can dig into but I want to break it up and start small. I really want to take advantage of one specific feature and that's creating custom activities for entity pages.
 
-![But why?](but_why.gif)
+{{< video "but_why.mp4" "But why?" >}}
 
 But why, you ask? Because we have so much other data to bring in front of our analysts from so many other sources besides just our Microsoft products. We're X-tending our reach with XDR. This allows us to pull everything into one place. It's our job to clean it up and find what matters so we can quickly identify emerging threats and risks in our environment and action our findings in a timely manner with as little portal/tab/window hopping.
 ## Getting started

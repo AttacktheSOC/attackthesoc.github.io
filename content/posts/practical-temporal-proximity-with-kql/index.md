@@ -10,7 +10,7 @@ draft = false
 
 Temporal Proximity in Information Security refers to the occurrence of two or more related events, similar or different in nature, within a specified time frame. This concept is essential for identifying patterns, correlations, and potential security incidents based on the timing and sequence of these events.
 
-![It's all timey wimey blib blab](timey-wimey.gif)
+{{< video "timey-wimey.mp4" "It's all timey wimey blib blab" >}}
 
 ## Reliable Data Sources
 

@@ -1,0 +1,15 @@
+{{/*
+  Custom shortcode: video
+  Replaces heavy reaction GIFs with a muted, looping, autoplaying <video>.
+  Usage (from the page bundle): {{< video "clip.mp4" "optional aria-label" >}}
+  Resolves the file as a page resource so Hugo publishes it; falls back to a
+  site-relative path if it isn't a bundle resource.
+*/}}
+{{ $src := .Get 0 }}
+{{ $label := .Get 1 }}
+{{ $res := .Page.Resources.Get $src }}
+<video autoplay loop muted playsinline preload="metadata"
+  class="my-0 rounded-md w-full max-w-full h-auto"
+  {{ with $label }}aria-label="{{ . }}"{{ end }}>
+  <source src="{{ with $res }}{{ .RelPermalink }}{{ else }}{{ $src | relURL }}{{ end }}" type="video/mp4">
+</video>

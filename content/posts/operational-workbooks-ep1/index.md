@@ -132,4 +132,4 @@ As always, I hope you walk away from this article with another tool in your belt
 
 Until next time on, Attack the SOC!
 
-![inosuke-running](inosuke.gif)
+{{< video "inosuke.mp4" "inosuke-running" >}}

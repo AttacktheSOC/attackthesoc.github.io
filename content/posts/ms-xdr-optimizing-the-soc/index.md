@@ -10,7 +10,7 @@ draft = false
 Alright, so you got the blinky boxes and colorful dashboards showing data no one remembers why they wanted to see. You even puts emojis in all your KQL charts because you can. You're drooling at the sight of that "Enter prompt here.." bar and the budget is burning a hole in your pocket. 
 
 Here's you:
-![Mario chasing the flying goalpost](mario_goalpost.gif)
+{{< video "mario_goalpost.mp4" "Mario chasing the flying goalpost" >}}
 
 Chasing down a goalpost that seemingly grew wings. If you turn around you'll see that you're hemorrhaging FPs, you have tons of undiagnosed system health alerts and you have some unknown unknowns, not because "that's just the nature of things" but because you haven't given yourself a minute to sit back and think.
 
@@ -101,7 +101,7 @@ As you could imagine this is but a simple usecase for what Azure Policy is capab
 
 Do you groan every time you open your incident queue, roll your eyes and then close the browser tab muttering to yourself "I'll get to those later"? Well, that's alert fatigue my friend and it's no joke. It affects your mental health putting you and team members at risk let alone your org as the job becomes tedious and boring.
 
-![sounds tedious and boring](tediousandboring.gif)
+{{< video "tediousandboring.mp4" "sounds tedious and boring" >}}
 
 A lot in this section is going to feel pretty common sense yet here we are.
 
