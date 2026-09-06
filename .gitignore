@@ -1,6 +1,7 @@
 # Hugo and Blowfish
 public/
-# resources/
+# Hugo's generated asset cache (resized images, etc.) — rebuilt on every `hugo` run, never commit
+resources/
 exampleSite/resources/
 
 # Drafts and WIP
