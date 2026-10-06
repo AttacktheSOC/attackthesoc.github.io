@@ -14,14 +14,6 @@ Lately I've moved toward the messier, more interesting end of the job: **DFIR an
 
 Most of what I work out ends up here — usually written up after I learned it the hard way.
 
-## Side Projects - IDOD
-I've developed a deep respect for the NGOs, nonprofits, civil society organizations, and human rights defenders working throughout the world. After time spent working at one such organization and getting the opportunity to meet and work with so manay amazing people, I became motivated to help this sector in any way I can. I hope to inspire, educate, and motivate others to redirect some of their own time and skills toward these causes as well.
-
-That motivation led me to start a side project in my spare time: an effort to inform and educate people—both inside this field and out—about it from an information security and technology perspective. I hope readers come away with answers to questions like: What are the struggles? Where could help be directed? What resources exist? How can I help?
-
-I also offer my services at no charge, to help secure and defend the people who put themselves at risk every day.
-More info can be found here: [In Defense of Defenders](https://attackthesoc.com/idod)
-
 ---
 
 ## 🌟 Quick Facts
@@ -47,7 +39,6 @@ The things I reach for most:
 ## 🌐 Online Presence
 Find me online:
 - **Blog:** [Attack the SOC](https://attackthesoc.com)
-- **Side Project:** [In Defense of Defenders](https://attackthesoc.com/idod)
 - **LinkedIn:** [Dylan Tenebruso](https://www.linkedin.com/in/dylten6/)
 - **GitHub:** [AttacktheSOC](https://github.com/AttacktheSOC)
 - **Twitter/X:** [@DylanInfosec](https://x.com/DylanInfosec)
